@@ -7,7 +7,6 @@ Array.from(deleteBtn).forEach((ele) => {
 async function deletePokemon() {
   const pokemonName = this.parentNode.childNodes[1].innerText;
   const pokemonType = this.parentNode.childNodes[3].innerText;
-  console.log(pokemonName, pokemonType);
   try {
     const response = await fetch("/deletePokemon", {
       method: "delete",

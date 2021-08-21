@@ -53,7 +53,6 @@ app.post("/addPokemon", (req, res) => {
 });
 
 app.delete("/deletePokemon", (request, response) => {
-  console.log(request.body.name, request.body.type);
   db.collection("pokemon")
     .deleteOne({ name: request.body.name, type: request.body.type })
     .then((result) => {
