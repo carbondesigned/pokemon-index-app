@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Index Updater</title>
+  </head>
+  <body>
+    <h1>Pokemon Index Updater</h1>
+    <h4>Update and Add Your Favorite Pokemon</h4>
+
+    <form action="/addPokemon" method="POST">
+      <input type="text" name="name" placeholder="Enter Your Desired Pokemon" />
+      <input type="text" name="type" placeholder="Enter the Pokemon's Type" />
+      <input type="submit" class="submit" />
+    </form>
+
+    <ul class="pokemon">
+      <% for (let i=0; i < data.length; i++) { %>
+      <li class="pokemon">
+        <span> <%= data[i].name %> </span>
+        <span> <%= data[i].type %> </span>
+        <button class="del">Delete</button>
+      </li>
+      <% } %>
+    </ul>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
